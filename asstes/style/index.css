@@ -1,0 +1,144 @@
+@import './reset.css';
+
+:root {
+    --app-dark-bg: #1a1d28;
+    --app-red: #ff3c57;
+    --app-green: #33ab4e;
+    --app-purple: #833cff;
+    --app-orange: #ff833c;
+    --app-blue: #3c57ff;
+    --app-blue-hover: #364ee6;
+}
+
+body {
+    background-color: var(--app-dark-bg);
+}
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+  }
+header {
+    height: 56px;
+    background-color: var(--app-purple);
+    /* box-shadow: 0 28 48 0 rgba(59, 69, 152, .2); */
+}
+
+.flexbox {
+    display: flex;
+}
+
+.title {
+    width: 40%;
+    height: 56%;
+}
+
+.title h1 {
+    font-size: 18px;
+    font-weight: 550;
+    line-height: 56px;
+    font-family: "Roboto", sans-serif;
+    color: rgb(247, 239, 239);
+    letter-spacing: 0.2px;
+}
+
+nav {
+    width: 60%;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    line-height: 56px;
+    cursor: default;
+}
+
+nav ul li a {
+    font-size: 17px;
+    color: rgb(241, 238, 238);
+    font-weight: 525;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li+li {
+    margin-left: 18px;
+}
+/* ------------------Clock-------------------- */
+
+.center{
+    width: 500px;
+    height: calc(100vh - 56px);
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.time {
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+}
+
+
+.icon{
+    color: #fff;
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    gap: 10px;
+
+}
+.bell{
+    margin-top: 5px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 120px;
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    text-align: left;
+    text-align: center;
+}
+input[type="text"]::placeholder{
+    color: rgb(161, 158, 158);
+}
+
+
+button {
+    width: 120px;
+    height: 48px;
+    text-align: center;
+    background-color: var(--app-blue);
+    border: 1px solid var(--app-blue);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition: all 0.25s ease-in-out;
+    color: #fff;
+    cursor: pointer;
+
+}
