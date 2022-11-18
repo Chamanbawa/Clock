@@ -22,32 +22,34 @@ const target = select('.target')
 const alarmSound = new Audio('./asstes/audio/win.mp3');
 alarmSound.type = 'audio/mp3';
 
-function bell() {
-    alarmSound.play();
-}
+// function bell() {}
 
 setInterval(function () {
     const currenTime = new Date();
     let current = `${currenTime.getHours()}:${currenTime.getMinutes()}:${currenTime.getSeconds()}`;
     time.innerText = current;
-
-    if ( current == input.value) {
-        console.log('hello');
-        bell();
-    }
-    
     
 }, 1000);
 
 onEvent('click', set, setAlarm);
 function setAlarm(){
     target.innerText =  `${input.value}`;
+    
+    const currenTime = new Date();
+    let current = `${currenTime.getHours()}:${currenTime.getMinutes()}:${currenTime.getSeconds()}`;
+    
+        if ( current == input.value) {
+            console.log('hello');
+            // bell();
+            alarmSound.play();
 
-
+        }
+        
+    
 }
 
 // function setAlarm() {
-
+    
 //     setTime = new Date(input.value);
 //     alarmDate = setTime.getHours()
 //     console.log(`Setting alarm for ${alarmDate}....`);
